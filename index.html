@@ -7,29 +7,53 @@
 
     <!-- LINK BOOTSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- LINK CSS -->
+    <link rel="stylesheet" href="style.css">
+
+
 </head>
 <body>
     
-    <button id="startButton">Gioca</button>
-    <div class="container">
+    <div class="blocco-gioco d-flex align-items-center justify-content-center">
 
-    </div>
-    <div id="spazioTempo"></div>
+        <!-- BLOCCO PER IL GAME -->
+        <div class="blocco-centrale">
 
-    <div id="bloccoRisposta" class="d-none">
-        <div id="risposta">
-            <input type="text" class="text"><input type="text" class="text"><input type="text" class="text"><input type="text" class="text"><input type="text" class="text">
+            <!-- BOTTONE DI INIZIO -->
+            <button id="startButton">Gioca</button>
+
+            <!-- SPAZIO DEI NUMERI DA INDOVINARE -->
+            <div class="container d-flex justify-content-around"></div>
+
+            <!-- BLOCCO PER IL TIMER -->
+            <div id="spazioTempo"></div>
+        
+            <!-- FORM PER INSERIRE I NUMERI -->
+            <div id="bloccoRisposta" class="d-none">
+                <div id="risposta d-flex flex-column">
+                    <input type="text" class="text" placeholder="inserisci numero">
+                    <input type="text" class="text" placeholder="inserisci numero">
+                    <input type="text" class="text" placeholder="inserisci numero">
+                    <input type="text" class="text" placeholder="inserisci numero">
+                    <input type="text" class="text" placeholder="inserisci numero">
+                </div>
+                <!-- INVIO ALLA RISPOSTA -->
+                <button id="sub">invia</button>
+            </div>
+            
+        
+            <!-- BLOCCO DEL RISULTATO -->
+            <div id="bloccoRisultato" class="d-none">
+                <h2>numeri indovinati:</h2>
+                <div id="result">
+        
+                </div>
+            </div>
         </div>
-        <button id="sub">invia</button>
+
     </div>
     
-
-    <div id="bloccoRisultato" class="d-none">
-        <h2>numeri indovinati:</h2>
-        <div id="result">
-
-        </div>
-    </div>
     <script src="script.js"></script>
 </body>
 </html>
